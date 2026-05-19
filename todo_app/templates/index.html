@@ -40,7 +40,12 @@
                 <b>{{ task.text }}</b>
                 <br>
                 <small>Создано: {{ task.date }}</small>
-                <a href="/delete/{{ loop.index0 }}">Удалить</a>
+                
+                {{ task.text }} — <small>{{ task.date }}</small>
+                <a href="/edit/{{ loop.index0 }}"> Редактировать</a>
+                <a href="/delete/{{ loop.index0 }}"> Удалить</a>
+
+
             </li>
 
         {% endfor %}
